@@ -10,4 +10,4 @@ WORKDIR $APP_HOME/
 RUN bundle install
 ADD . $APP_HOME
 #RUN rails new wasepa_app --api --skip-bundle --skip-active-record
-#WORKDIR $APP_HOME/wasepa_app/
+WORKDIR $APP_HOME/wasepa_app/
