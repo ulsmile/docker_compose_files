@@ -1,5 +1,5 @@
 development:
-   Configure available database clients. (required)
+  # Configure available database clients. (required)
   clients:
     # Defines the default client. (required)
     default:
@@ -9,7 +9,7 @@ development:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - dockercomposefiles_db_1:27017
+        - db:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -111,7 +111,7 @@ development:
 
     # Preload all models in development, needed when models use
     # inheritance. (default: false)
-     preload_models: json_mongo
+    # preload_models: false
 
     # Raise an error when performing a #find and the document is not found.
     # (default: true)
@@ -136,7 +136,7 @@ test:
     default:
       database: wasepa_app_test
       hosts:
-        - localhost:27017
+        - db:27017
       options:
         read:
           mode: :primary
